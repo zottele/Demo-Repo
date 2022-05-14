@@ -19,7 +19,12 @@ def main():
 
     test = "Test"
     r = requests.get("https://coreyms.com")
-    print(r.status_code)
+    # print(r.status_code)
+    if r.status_code != 200:
+        print("not ok")
+    else:
+        print("Got Site")
+    print(r.content)
 
 
 if __name__ == "__main__":
